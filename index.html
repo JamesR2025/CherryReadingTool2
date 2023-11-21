@@ -1,0 +1,120 @@
+<!--The reindeer were about the size of Shetland ponies and their hair was so white that even the snow hardly looked white compared with them; 
+    their branching horns were gilded and shone like something on fire when the sunrise caught them. 
+    Their harness was of scarlet leather and covered with bells. 
+    On the sledge, driving the reindeer, sat a fat dwarf who would have been about three feet high if he had been standing.
+     He was dressed in polar bear’s fur and on his head he wore a red hood with a long gold tassel hanging down from its point;
+      his huge beard covered his knees and served him instead of a rug.
+       But behind him, on a much higher seat in the middle of the sledge sat a very different person — a great lady, taller than any woman that Edmund had ever seen. 
+       She also was covered in white fur up to her throat and held a long straight golden wand in her right hand and wore a golden crown on her head. 
+       Her face was white — not merely pale, but white like snow or paper or icing-sugar, except for her very red mouth. 
+       It was a beautiful face in other respects, but proud and cold and stern. 
+    The sledge was a fine sight as it came sweeping towards Edmund with the bells jingling and the dwarf cracking his whip and the snow flying up on each side of it.
+  C.S Lewis. THe Lion, the Witch, and the Wardrobe-->
+
+
+    <!--Words to highlight:
+    1. reindeer
+    2. Shetland ponies
+    3. gilded
+    4. scarlet leather
+    5. long gold tassel
+    6. rug
+    7. golden wand
+    8. icing-sugar
+    7. golden crown
+    9. stern
+ -->
+
+ <!--Words to add sound: sweeping, bells jingling, cracking his whip, snow flying-->
+
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>For Cherry</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:ital,wght@0,400;0,800;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="instructions">
+            <h1>Cherry's Reading Tool</h1>
+            <p>Click the box to turn the word into an image!<br>
+            Click the orange buttons to bring the story to life! </p>
+
+        </div>
+        <div id="app">
+            <div id="text">
+                <p>The <button class="photo" id="reindeer">reindeer</button> were about the size of <button class="photo" id="shetlandponies">Shetland ponies</button>  and their hair was so white that even the snow hardly looked white compared with them;<br> 
+                    their branching horns were  <button class="photo" id="gilded">gilded</button>  and shone like something on fire when the sunrise caught them.<br>
+                    Their harness was of  <button class="photo" id="scarlet-leather">scarlet leather</button>  and covered with bells.<br>
+                    On the sledge, driving the reindeer, sat a fat <button class="photo" id="dwarf">dwarf</button> who would have been about three feet high if he had been standing.<br>
+                    He was dressed in polar bear`s fur and on his head he wore a red hood with a long  <button class="photo" id="goldTassle">gold tassel</button>  hanging down from its point;<br>
+                    his huge beard covered his knees and served him instead of a rug.<br>
+                    But behind him, on a much higher seat in the middle of the sledge sat a very different person — a great lady, taller than any woman that Edmund had ever seen.<br>
+                    She also was covered in  <button class="photo" id="fur">white fur</button>  up to her throat and held a long straight <button class="photo" id="goldWand">golden wand</button>  in her right hand and wore a golden crown on her head.<br>
+                    Her face was white — not merely pale, but white like snow or paper or  <button class="photo" id="sugar">icing-sugar</button>  , except for her very red mouth.<br>
+                    It was a beautiful face in other respects, but proud and cold and <button class="photo" id="stern">stern.</button><br>
+                    The sledge was a fine sight as it came <button id="sweep" class="sound">sweeping</button> towards Edmund with the bells <button id="jingle" class="sound">jingling</button> and the dwarf <button id="whip" class="sound">cracking his whip</button> and the <button id="snow" class="sound">snow flying up</button> on each side of it.<br>
+                    <em>C.S Lewis. The Lion, the Witch, and the Wardrobe</em></p>
+            </div>
+            
+                <!--List of Photos-->
+                <img id="reindeerPhoto" style="display: none;" src="reindeer.jpeg">
+                <img id="shetlandponiesPhoto" style="display: none;" src="shetlandponies.jpeg">
+                <img id="gildedPhoto" style="display: none;" src="gilded.jpeg">
+                <img id="scarletLeatherPhoto" style="display: none;" src="scarlet-leather.jpeg">
+                <img id="dwarfPhoto" style="display: none;" src="dwarf.webp">
+                <img id="goldTasslePhoto" style="display: none;" src="gold-tassle.jpg">
+                <img id="furPhoto" style="display: none;" src="whiteFur.jpeg">
+                <img id="goldWandPhoto" style="display: none;" src="gold-wand.jpeg">
+                <img id="icingSugarPhoto" style="display: none;" src="powdered-sugar.jpeg">
+                <img id="sternPhoto" style="display: none;" src="stern.jpeg">
+            
+        </div>
+
+        <div id="assignment">
+            <p>Thank you for reading! Here is a French quote for you!</p>
+            <button id="frenchQuoteButton" onclick="frenchQuoteDisplay()">Click Here!</button>
+            <div id="frenchQuote"></div>
+
+
+        </div>
+
+    <!--List of sounds:
+    -->
+
+    <audio id="sweepingSound">
+        <source src="woosh.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="jinglingSound">
+        <source src="jingleBellSound.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="whipSound">
+        <source src="whipSound.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="windSound">
+        <source src="windSound.mp3" type="audio/mp3">
+    </audio>
+
+
+    <script type="module" src="eventListeners.js"></script>
+    <script type="module" src="sounds.js"></script>
+    <script>
+        function frenchQuoteDisplay() {
+            const quoteBox = document.getElementById('frenchQuote');
+            quoteBox.innerHTML = "<p id='frenchQuote'>On ne voit bien qu'avec le cœur. <br> L'essentiel est invisible pour les yeux</p>";
+        }
+    </script>
+
+
+        
+    </body>
+ </html>
+
+
